@@ -1,2 +1,7 @@
 _site
+<<<<<<< HEAD
 .DS_Store
+=======
+.sass-cache
+.jekyll-metadata
+>>>>>>> change theme
