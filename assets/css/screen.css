@@ -148,11 +148,14 @@ h6 {
 }
 
 a {
-    color: #4a4a4a;
+    /*color: #4a4a4a;*/
+        color: #aa0000;
+
     transition: color ease 0.3s;
 }
 
 a:hover {
+
     color: #57A3E8;
 }
 
@@ -372,8 +375,8 @@ margin on the iframe, cause it breaks stuff. */
     height: 60%;
     margin-bottom: 5rem;
     text-align: center;
-    color: #fff;
-    background: #303538 no-repeat center center;
+/*    color: #fff;*/
+/*    background: #303538 no-repeat center center;*/
     background-size: cover;
 }
 
@@ -393,7 +396,7 @@ margin on the iframe, cause it breaks stuff. */
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
     margin: 10px 0 10px 0;
-    font-size: 5rem;
+    /*font-size: 5rem;*/
     letter-spacing: -1px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
@@ -587,7 +590,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 1.8rem;
     display: inline-block;
     margin: 1.4rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
+/*    color: #BBC7CC;*/
     text-decoration: none;
 }
 
