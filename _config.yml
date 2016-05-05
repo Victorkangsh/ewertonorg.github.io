@@ -3,7 +3,7 @@ description:
 meta_description: "Ewerton Nascimento"
 
 markdown: kramdown
-highlighter: rogue
+highlighter: rouge
 
 baseurl: '/'
 
