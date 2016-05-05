@@ -40,10 +40,8 @@ o  modo como iremos manipular o arquivo. As maneiras mais comuns são:
  -  r abre o arquivo somente para leitura;
  -  a abre o arquivo somente para escrita (começa a escrita no final
 da última linha existente se o arquivo já existir).
- -  w abre o arquivo somente para escrita (sobrescreve todo o con-
-teúdo do arquivo se o mesmo existir);
- - w+ abre o arquivo tanto para leitura quanto para escrita (sobre-
-screve todo o conteúdo do arquivo se o mesmo existir);
+ -  w abre o arquivo somente para escrita (sobrescreve todo o conteúdo do arquivo se o mesmo existir);
+ - w+ abre o arquivo tanto para leitura quanto para escrita (sobrescreve todo o conteúdo do arquivo se o mesmo existir);
 
 
 Agora irei criar um projeto onde vou adicionar as músicas em uma playlist.
@@ -93,15 +91,15 @@ Em track.rb crio uma classe chamada Track. Essa classe terá as informações da
 {% highlight ruby %}
 class Track
   def initialize name, album, release, band
-	  @name=name
-	  @band=band
-	  @album=album
-	  @release=release
+    @name=name
+    @band=band
+    @album=album
+    @release=release
   end
   
-	def to_s
-	  "Album: #{@album}, name: #{@name}, band: #{@band}, release:  #{@release}"
-	end
+  def to_s
+    "Album: #{@album}, name: #{@name}, band: #{@band}, release:  #{@release}"
+  end
 end
 
 {% endhighlight %}
@@ -110,12 +108,12 @@ A classe Playlist vai salvar as faixas em um arquivo yaml, chamado playlist.yaml
 
 {% highlight ruby %}
 class Playlist
-	def save_tracks track
-		File.open('playlist.yaml', 'a') do |file|
-			file.puts YAML.dump track
-			file.puts ""
-		end	
-	end
+  def save_tracks track
+    File.open('playlist.yaml', 'a') do |file|
+      file.puts YAML.dump track
+      file.puts ""
+    end	
+  end
 end
 {% endhighlight %}
 
@@ -127,11 +125,17 @@ Vamos carregar o projeto e adicionar as músicas.
 [1] pry(main)> require File.expand_path('lib/load_playlist')                                                                                                   
 => true
 
-pry(main)> Playlist.new.save_tracks  Track.new "Pyramid God", "The Great Mass", '2011', 'Septicflesh'
+track1 = Track.new "Pyramid God", "The Great Mass", '2011', 'Septicflesh'
+track2 = Track.new "Thanatolatria", "Life", '2012', 'Kataphero'
+track3 = Track.new "O Father O Satan O Sun!", "The Satanist", '2014', 'Behemoth'
 
-pry(main)> Playlist.new.save_tracks Track.new "Thanatolatria", "Life", '2012', 'Kataphero'
+playlist = Playlist.new
 
-pry(main)> Playlist.new.save_tracks Track.new "O Father O Satan O Sun!", "The Satanist", '2014', 'Behemoth'                                                                            
+playlist.save_tracks track1
+playlist.save_tracks track2
+playlist.save_tracks track3
+
+
 
 
 {% endhighlight %}
