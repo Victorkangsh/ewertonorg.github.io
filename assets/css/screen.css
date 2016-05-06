@@ -150,7 +150,7 @@ h6 {
 a {
     /*color: #4a4a4a;*/
      color: #aa0000;
-     text-decoration: none
+     text-decoration: none;
      transition: color ease 0.3s;
 }
 
