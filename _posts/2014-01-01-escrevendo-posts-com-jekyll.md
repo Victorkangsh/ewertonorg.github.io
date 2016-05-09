@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Escrevendo posts com jekyll
+title:  Escrevendo posts com Jekyll
 date:   2014-01-01 20:00:00
 categories: iniciante
 ---
