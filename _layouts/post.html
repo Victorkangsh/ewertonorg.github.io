@@ -33,16 +33,14 @@ archive: true
             {{content}}
         </section>
 
-        {% if page.archive %}
         <section class="archive">
         	<h5>Arquivos recentes</h5>
     		<ul>
-    			{% for post in site.posts %}
+    			{% for post in site.posts | limit: 5 %}
     				<li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
     			{% endfor %}	
     		</ul>
         </section>
-        {% endif %}
 
         <footer class="post-footer">
         	<!-- If we want to display author's name and bio -->
